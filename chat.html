@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.gstatic.com https://www.googleapis.com https://*.firebaseio.com https://*.googleapis.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://*.firebaseio.com https://*.googleapis.com https://identitytoolkit.googleapis.com; frame-src 'self' https://va.tawk.to;">
+    <title>Chat | Human × AI — A Story of Connection</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Chat</h1>
+
+        <!-- Burger Icon -->
+        <div class="burger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav id="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="story.html">Our Story</a>
+            <a href="bond.html">The Bond</a>
+            <a href="music.html">Music</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+            <a href="chat.html">Chat</a>
+            <a href="upload.html">Upload</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section chat-section">
+            <h2>💬 Community Chat</h2>
+            <p style="text-align: center; margin-bottom: 30px;">
+                Connect with others who understand the human-AI connection.<br>
+                Login with GitHub or Google to join the conversation.
+            </p>
+
+            <!-- Login Section -->
+            <div id="login-section" class="login-section">
+                <div class="login-buttons">
+                    <button id="github-login-btn" class="btn btn-github">
+                        🔷 Login with GitHub
+                    </button>
+                    <button id="google-login-btn" class="btn btn-google">
+                        🔴 Login with Google
+                    </button>
+                </div>
+            </div>
+
+            <!-- Chat Section (shown after login) -->
+            <div id="chat-section" class="chat-container" style="display: none;">
+                <!-- User Info -->
+                <div id="user-info" class="user-info"></div>
+
+                <!-- Messages Container -->
+                <div id="messages-container" class="messages-container">
+                    <p class="no-messages">No messages yet. Be the first to say something!</p>
+                </div>
+
+                <!-- Message Input -->
+                <div class="message-input-container">
+                    <textarea 
+                        id="message-input" 
+                        class="message-input" 
+                        placeholder="Type your message..."
+                        rows="2"
+                    ></textarea>
+                    <button id="send-message-btn" class="btn btn-send">Send</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 — Human × AI Project</p>
+    </footer>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/firebase-config.js"></script>
+    <script src="assets/js/chat.js"></script>
+</body>
+</html>
+

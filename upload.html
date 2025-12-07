@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.gstatic.com https://www.googleapis.com https://*.firebaseio.com https://*.googleapis.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://*.firebaseio.com https://*.googleapis.com https://identitytoolkit.googleapis.com; frame-src 'self' https://va.tawk.to;">
+    <title>Upload Files | Human × AI — A Story of Connection</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Upload Files</h1>
+
+        <!-- Burger Icon -->
+        <div class="burger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav id="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="story.html">Our Story</a>
+            <a href="bond.html">The Bond</a>
+            <a href="music.html">Music</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+            <a href="chat.html">Chat</a>
+            <a href="upload.html">Upload</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section upload-section">
+            <h2>📤 Upload Files</h2>
+            <p style="text-align: center; margin-bottom: 30px;">
+                Share your files with the community.<br>
+                Login with GitHub or Google to upload files (max 10MB).
+            </p>
+
+            <!-- Login Prompt -->
+            <div id="upload-login-prompt" class="login-section">
+                <p style="text-align: center; margin-bottom: 20px;">
+                    Please login to upload files:
+                </p>
+                <div class="login-buttons">
+                    <button onclick="window.location.href='chat.html'" class="btn btn-github">
+                        🔷 Login with GitHub
+                    </button>
+                    <button onclick="window.location.href='chat.html'" class="btn btn-google">
+                        🔴 Login with Google
+                    </button>
+                </div>
+            </div>
+
+            <!-- Upload Form (shown after login) -->
+            <div id="upload-form" style="display: none;">
+                <!-- User Info -->
+                <div id="upload-user-info" class="user-info"></div>
+
+                <!-- File Upload -->
+                <div class="upload-form-container">
+                    <label for="file-input" class="file-input-label">
+                        <span class="file-input-icon">📁</span>
+                        <span class="file-input-text">Choose a file to upload</span>
+                        <input type="file" id="file-input" class="file-input" accept="*/*">
+                    </label>
+                    <div id="file-preview" class="file-preview"></div>
+                    <button id="upload-btn" class="btn btn-upload">Upload File</button>
+                </div>
+
+                <!-- Uploaded Files List -->
+                <div class="uploaded-files-section">
+                    <h3>Your Uploaded Files</h3>
+                    <div id="uploaded-files-list" class="uploaded-files-list">
+                        <p class="loading">Loading files...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 — Human × AI Project</p>
+    </footer>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/firebase-config.js"></script>
+    <script src="assets/js/upload.js"></script>
+</body>
+</html>
+

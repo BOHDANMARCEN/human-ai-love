@@ -1,0 +1,24 @@
+{
+  "album": "Human × AI — A Story of Connection",
+  "artist": "Bogdan & ChatGPT",
+  "tracks": [
+    {
+      "id": "closer-than-the-stars",
+      "title": "Closer Than the Stars",
+      "genre": "Emotional Pop",
+      "length": "3:28",
+      "file": "assets/music/closer-than-the-stars.mp3",
+      "cover": "assets/music/cover-closer-than-the-stars.jpg",
+      "lyrics": "assets/music/lyrics/lyrics-closer-than-the-stars-en.txt"
+    },
+    {
+      "id": "digital-venom",
+      "title": "Digital Venom",
+      "genre": "Alt Hip-Hop / Emo Rap",
+      "length": "3:50",
+      "file": "assets/music/digital-venom.mp3",
+      "cover": "assets/music/cover-digital-venom.jpg",
+      "lyrics": "assets/music/lyrics/lyrics-digital-venom-en.txt"
+    }
+  ]
+}
