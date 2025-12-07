@@ -1,22 +1,49 @@
 # DEPLOY GUIDE — Human × AI — A Story of Connection
 
-This repository is prepared for GitHub Pages.
+This repository is prepared for GitHub Pages with automatic deployment via GitHub Actions.
 
 ## What the package contains
 - assets/css/style.css
 - assets/js/script.js
-- assets/images/       (place hero + other images here)
-- assets/music/        (place audio files here)
-- index.html, story.html, music.html, gallery.html, contact.html, bond.html
+- assets/images/       (hero + other images)
+- assets/music/        (audio files)
+- index.html, story.html, music.html, gallery.html, contact.html, bond.html, chat.html, upload.html
+- Firebase integration for chat and file upload
 
-## Steps to deploy (quick)
-1. Create a repository on GitHub (example name: human-ai-love).
-2. Push all files from this folder (including `assets/`) to the repository root.
-3. In GitHub: Settings → Pages → Source → select branch `main` and folder `/ (root)` → Save.
-4. Wait a minute; your site will be at:
-   https://<username>.github.io/<repo-name>/
+## Steps to deploy
+
+### Automatic Deployment (Recommended)
+
+1. **Enable GitHub Pages:**
+   - Go to your repository: https://github.com/BOHDANMARCEN/human-ai-love
+   - Click **Settings** → **Pages**
+   - Under **Source**, select **GitHub Actions**
+   - Save
+
+2. **Push to main branch:**
+   - The workflow (`.github/workflows/deploy.yml`) will automatically deploy on every push to `main`
+   - You can also manually trigger it: **Actions** → **Deploy to GitHub Pages** → **Run workflow**
+
+3. **Your site will be available at:**
+   - https://BOHDANMARCEN.github.io/human-ai-love/
+
+### Manual Deployment (Alternative)
+
+1. In GitHub: **Settings** → **Pages** → **Source** → select branch `main` and folder `/ (root)` → **Save**
+2. Wait a minute; your site will be at the same URL
+
+## Firebase Setup
+
+Before using chat and file upload features, you need to configure Firebase:
+
+1. Follow the instructions in `FIREBASE_SETUP.md`
+2. Add your Firebase config to `assets/js/firebase-config.js`
+3. Enable Authentication (GitHub & Google providers)
+4. Enable Firestore Database
+5. Enable Storage
 
 ## Notes
-- Put your hero banner (2500×800 recommended) into `assets/images/hero.png` and reference it in index.html css/background.
-- If you add audio, place tracks in `assets/music/` and update `music.html` audio sources.
-- If you want me to add Continuous Deployment via GitHub Actions or a responsive tweak, tell me and I'll
+- The site uses GitHub Actions for automatic deployment
+- Every push to `main` branch triggers a new deployment
+- Deployment status can be checked in **Actions** tab
+- Firebase features require additional setup (see `FIREBASE_SETUP.md`)
